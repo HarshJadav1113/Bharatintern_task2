@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PMT</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <header>
+    <h1><i>Project Management Tool</i></h1>
+  </header>
+
+  <section>
+    <h2>Create a Task</h2>
+    <form id="taskForm">
+      <label for="taskTitle">Task Title:</label>
+      <input type="text" id="taskTitle" name="taskTitle" required>
+      
+      <label for="taskDescription">Task Description:</label>
+      <textarea id="taskDescription" name="taskDescription" rows="4" required></textarea>
+      
+      <label for="assignee">Assignee:</label>
+      <input type="text" id="assignee" name="assignee" required>
+      
+      <button type="button" onclick="addTask()">Assign Task</button>
+    </form>
+  </section>
+
+  <section id="tasks">
+    <!-- Display added tasks here -->
+  </section>
+
+  <script>
+    function addTask() {
+
+      const taskTitle = document.getElementById('taskTitle').value;
+      const taskDescription = document.getElementById('taskDescription').value;
+      const assignee = document.getElementById('assignee').value;
+
+      const taskElement = document.createElement('div');
+      taskElement.innerHTML = `
+        <h3>${taskTitle}</h3>
+        <p>${taskDescription}</p>
+        <p><strong>Assignee:</strong> ${assignee}</p>`;
+
+      document.getElementById('tasks').appendChild(taskElement);
+
+      document.getElementById('taskForm').reset();
+    }
+  </script>
+</body>
+</html>

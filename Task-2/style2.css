@@ -1,0 +1,66 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #6ad5c1;
+}
+header {
+  background-color: #4097b9;
+  color: #ecf0f1;
+  text-align: center;
+  margin: 40px;
+  padding: 1em 0;
+  border: 15px solid black;
+}
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 30);
+}
+form {
+  display: grid;
+  gap: 15px;
+}
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #2980b9;
+}
+#tasks {
+  margin-top: 20px;
+}
+#tasks div {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
+#tasks h3 {
+  color: #2c3e50;
+}
+#tasks p {
+  color: #555;
+}
